@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="top_nav">
+        <div class="top_logo">
+          <p class="waymo"><a href="../index.html">Group</a></p>
+          <p class="x"><a href="../index.html">5</a></p>
+        </div>
+        <ul class="nav_menu">
+          <li class="nav_link"><a href="../index.html">Home</a></li>
+          <li class="nav_link"><a href="./about.html">About</a></li>
+          <li class="nav_link">
+            <a href="./gallery.html" class="active">Gallery</a>
+          </li>
+          <li class="nav_link"><a href="./projects.html">Projects</a></li>
+          <li class="nav_link"><a href="./contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    <div class="gallery">
+      <div class="gallery_image">
+        <img src="../Images/1.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../Images/2.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../Images/3.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../images/4.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../images/5.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../images/6.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../images/7.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../images/8.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../images/10.jpg" alt="project" class="image" />
+      </div>
+      <div class="gallery_image">
+        <img src="../images/11.jpg" alt="project" class="image" />
+      </div>
+    
+    </div>
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav_menu");
+    const navLink = document.querySelectorAll(".nav_link");
+
+    hamburger.addEventListener("click", mobileMenu);
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+</html>

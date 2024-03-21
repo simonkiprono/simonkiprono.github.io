@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="top_nav">
+        <div class="top_logo">
+          <p class="waymo"><a href="../index.html">Group</a></p>
+          <p class="x"><a href="index.html">5</a></p>
+        </div>
+        <ul class="nav_menu">
+          <li class="nav_link">
+            <a href="../index.html" class="active">Home</a>
+          </li>
+          <li class="nav_link"><a href="#">About</a></li>
+          <li class="nav_link"><a href="../pages/gallery.html">Gallery</a></li>
+          <li class="nav_link">
+            <a href="../pages/projects.html">Projects</a>
+          </li>
+          <li class="nav_link"><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1>My Projects</h1>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="../images/project1.png" alt="Project 1" />
+          <h3>Project 1</h3>
+          <p>
+            A simple class project that I did in my first year. It was a simple web page that I created using HTML and CSS.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="project-card">
+          <img src="../images/project2.png" alt="Project 2" />
+          <h3>Project 2</h3>
+          <p>
+            A web application that I created using HTML, CSS, and JavaScript. It was a simple to-do list application.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="project-card">
+          <img src="../images/project3.png" alt="Project 3" />
+          <h3>Project 3</h3>
+          <p>
+            A simple website that shows my skills and projects that I have worked on. I created it using HTML, CSS, and JavaScript.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav_menu");
+    const navLink = document.querySelectorAll(".nav_link");
+
+    hamburger.addEventListener("click", mobileMenu);
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+</html>

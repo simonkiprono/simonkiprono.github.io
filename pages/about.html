@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="top_nav">
+          <div class="top_logo">
+            <p class="waymo"><a href="../index.html">Group</a></p>
+            <p class="x"><a href="index.html">5</a></p>
+          </div>
+          <ul class="nav_menu">
+            <li class="nav_link"><a href="../index.html" class="active">Home</a></li>
+            <li class="nav_link"><a href="#">About</a></li>
+            <li class="nav_link"><a href="../pages/gallery.html">Gallery</a></li>
+            <li class="nav_link"><a href="../pages/projects.html">Projects</a></li>
+            <li class="nav_link"><a href="../pages/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </header>
+      <div class="body_wrapper">
+        <div class="intro">
+          <div class="brief">
+            <h1 class="hi">Hi,<br />I am Simon</h1>
+            <div class="brief_intro">
+              <p class="description">
+                I am a first year DIT student at KCA University. I am passionate
+                about technology and I am always looking for new ways to improve
+                my skills. I am a web developer and I am also interested in mobile
+                app development.
+              </p>
+            </div>
+          </div>
+          <div>
+            <img src="../images/devlopa.png" alt="illustration" class="image_one" />
+          </div>
+        </div>
+        
+</body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav_menu");
+    const navLink = document.querySelectorAll(".nav_link");
+
+    hamburger.addEventListener("click", mobileMenu);
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function mobileMenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    function closeMenu() {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+</html>

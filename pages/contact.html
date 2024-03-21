@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="top_nav">
+        <div class="top_logo">
+          <p class="waymo"><a href="../index.html">Group</a></p>
+          <p class="x"><a href="index.html">5</a></p>
+        </div>
+        <ul class="nav_menu">
+          <li class="nav_link">
+            <a href="../index.html" class="active">Home</a>
+          </li>
+          <li class="nav_link"><a href="#">About</a></li>
+          <li class="nav_link"><a href="../pages/gallery.html">Gallery</a></li>
+          <li class="nav_link">
+            <a href="../pages/projects.html">Projects</a>
+          </li>
+          <li class="nav_link"><a href="../pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <form id="myForm">
+      <h1>Contact Me - A sample form</h1>
+      <br />
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <br />
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById("myForm");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+
+        if (nameInput.value.trim() === "" || emailInput.value.trim() === "") {
+          alert("Please fill in all fields.");
+        } else {
+          alert("Form submitted successfully!");
+          form.reset();
+        }
+      });
+
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav_menu");
+      const navLink = document.querySelectorAll(".nav_link");
+
+      hamburger.addEventListener("click", mobileMenu);
+      navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
+    </script>
+  </body>
+</html>
